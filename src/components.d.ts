@@ -6,56 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface XmasiarikovaAmbulanceWlList {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLXmasiarikovaAmbulanceWlListElement extends Components.XmasiarikovaAmbulanceWlList, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLXmasiarikovaAmbulanceWlListElement: {
+        prototype: HTMLXmasiarikovaAmbulanceWlListElement;
+        new (): HTMLXmasiarikovaAmbulanceWlListElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "xmasiarikova-ambulance-wl-list": HTMLXmasiarikovaAmbulanceWlListElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface XmasiarikovaAmbulanceWlList {
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "xmasiarikova-ambulance-wl-list": XmasiarikovaAmbulanceWlList;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "xmasiarikova-ambulance-wl-list": LocalJSX.IntrinsicElements["xmasiarikova-ambulance-wl-list"] & JSXBase.HTMLAttributes<HTMLXmasiarikovaAmbulanceWlListElement>;
         }
     }
 }
