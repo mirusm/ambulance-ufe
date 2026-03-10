@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface XmasiarikovaAmbulanceWlApp {
+        "ambulanceId": string;
+        "apiBase": string;
         /**
           * @default ""
          */
@@ -16,6 +18,8 @@ export namespace Components {
         "entryId": string;
     }
     interface XmasiarikovaAmbulanceWlList {
+        "ambulanceId": string;
+        "apiBase": string;
     }
 }
 export interface XmasiarikovaAmbulanceWlEditorCustomEvent<T> extends CustomEvent<T> {
@@ -75,6 +79,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface XmasiarikovaAmbulanceWlApp {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
         /**
           * @default ""
          */
@@ -85,20 +91,28 @@ declare namespace LocalJSX {
         "onEditor-closed"?: (event: XmasiarikovaAmbulanceWlEditorCustomEvent<string>) => void;
     }
     interface XmasiarikovaAmbulanceWlList {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
         "onEntry-clicked"?: (event: XmasiarikovaAmbulanceWlListCustomEvent<string>) => void;
     }
 
     interface XmasiarikovaAmbulanceWlAppAttributes {
         "basePath": string;
+        "apiBase": string;
+        "ambulanceId": string;
     }
     interface XmasiarikovaAmbulanceWlEditorAttributes {
         "entryId": string;
+    }
+    interface XmasiarikovaAmbulanceWlListAttributes {
+        "apiBase": string;
+        "ambulanceId": string;
     }
 
     interface IntrinsicElements {
         "xmasiarikova-ambulance-wl-app": Omit<XmasiarikovaAmbulanceWlApp, keyof XmasiarikovaAmbulanceWlAppAttributes> & { [K in keyof XmasiarikovaAmbulanceWlApp & keyof XmasiarikovaAmbulanceWlAppAttributes]?: XmasiarikovaAmbulanceWlApp[K] } & { [K in keyof XmasiarikovaAmbulanceWlApp & keyof XmasiarikovaAmbulanceWlAppAttributes as `attr:${K}`]?: XmasiarikovaAmbulanceWlAppAttributes[K] } & { [K in keyof XmasiarikovaAmbulanceWlApp & keyof XmasiarikovaAmbulanceWlAppAttributes as `prop:${K}`]?: XmasiarikovaAmbulanceWlApp[K] };
         "xmasiarikova-ambulance-wl-editor": Omit<XmasiarikovaAmbulanceWlEditor, keyof XmasiarikovaAmbulanceWlEditorAttributes> & { [K in keyof XmasiarikovaAmbulanceWlEditor & keyof XmasiarikovaAmbulanceWlEditorAttributes]?: XmasiarikovaAmbulanceWlEditor[K] } & { [K in keyof XmasiarikovaAmbulanceWlEditor & keyof XmasiarikovaAmbulanceWlEditorAttributes as `attr:${K}`]?: XmasiarikovaAmbulanceWlEditorAttributes[K] } & { [K in keyof XmasiarikovaAmbulanceWlEditor & keyof XmasiarikovaAmbulanceWlEditorAttributes as `prop:${K}`]?: XmasiarikovaAmbulanceWlEditor[K] };
-        "xmasiarikova-ambulance-wl-list": XmasiarikovaAmbulanceWlList;
+        "xmasiarikova-ambulance-wl-list": Omit<XmasiarikovaAmbulanceWlList, keyof XmasiarikovaAmbulanceWlListAttributes> & { [K in keyof XmasiarikovaAmbulanceWlList & keyof XmasiarikovaAmbulanceWlListAttributes]?: XmasiarikovaAmbulanceWlList[K] } & { [K in keyof XmasiarikovaAmbulanceWlList & keyof XmasiarikovaAmbulanceWlListAttributes as `attr:${K}`]?: XmasiarikovaAmbulanceWlListAttributes[K] } & { [K in keyof XmasiarikovaAmbulanceWlList & keyof XmasiarikovaAmbulanceWlListAttributes as `prop:${K}`]?: XmasiarikovaAmbulanceWlList[K] };
     }
 }
 export { LocalJSX as JSX };
