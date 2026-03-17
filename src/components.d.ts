@@ -15,6 +15,8 @@ export namespace Components {
         "basePath": string;
     }
     interface XmasiarikovaAmbulanceWlEditor {
+        "ambulanceId": string;
+        "apiBase": string;
         "entryId": string;
     }
     interface XmasiarikovaAmbulanceWlList {
@@ -87,6 +89,8 @@ declare namespace LocalJSX {
         "basePath"?: string;
     }
     interface XmasiarikovaAmbulanceWlEditor {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
         "entryId"?: string;
         "onEditor-closed"?: (event: XmasiarikovaAmbulanceWlEditorCustomEvent<string>) => void;
     }
@@ -103,6 +107,8 @@ declare namespace LocalJSX {
     }
     interface XmasiarikovaAmbulanceWlEditorAttributes {
         "entryId": string;
+        "ambulanceId": string;
+        "apiBase": string;
     }
     interface XmasiarikovaAmbulanceWlListAttributes {
         "apiBase": string;

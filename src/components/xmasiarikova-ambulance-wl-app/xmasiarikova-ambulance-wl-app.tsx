@@ -54,6 +54,7 @@ export class XmasiarikovaAmbulanceWlApp {
       <Host>
         { element === "editor"
         ? <xmasiarikova-ambulance-wl-editor entry-id={entryId}
+            ambulance-id={this.ambulanceId} api-base={this.apiBase}
             oneditor-closed={ () => navigate("./list")} >
           </xmasiarikova-ambulance-wl-editor>
         : <xmasiarikova-ambulance-wl-list  ambulance-id={this.ambulanceId} api-base={this.apiBase}
